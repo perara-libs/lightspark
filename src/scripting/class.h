@@ -316,7 +316,7 @@ template<>
 class Class<ASObject>: public Class_base
 {
 private:
-	Class<ASObject>(const QName& name, MemoryAccount* m):Class_base(name, m){}
+	explicit Class<ASObject>(const QName& name, MemoryAccount* m):Class_base(name, m){}
 	//This function is instantiated always because of inheritance
 	void getInstance(asAtom& ret, bool construct, asAtom* args, const unsigned int argslen, Class_base* realClass=nullptr);
 public:
